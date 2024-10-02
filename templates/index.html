@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACM Movie Ticket</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>ACM Movie Ticket</h1>
+        <h3 class="movie-name">Movie:SOURCE CODE</h3>
+        <form action="" id="ticketForm" method="post" onsubmit="validateForm(event); return false;">
+            {% csrf_token %}
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br>
+
+            <label for="branch">Branch:</label>
+            <input type="text" id="branch" name="branch" required><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" required><br>
+
+            <div class="button-container">
+                <button type="submit">Generate Ticket</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

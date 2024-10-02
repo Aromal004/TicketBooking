@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated Ticket</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Your Movie Ticket</h1>
+
+        <div id="ticket" class="ticket">
+            <div class="ticket-header">
+                <img src="{% static 'images/logo.png' %}" alt="Logo" class="logo">
+                <h2>ACM Movie Ticket</h2>
+            </div>
+            
+            <div class="ticket-details">
+                <!-- Left Section: User details -->
+                <div class="left-section">
+                    <p id="ticketName">Name: {{ name }}</p>
+                    <p id="ticketBranch">Branch:{{ branch }} </p>
+                </div>
+
+                <!-- Center Section: Movie details -->
+                <div class="center-section">
+                    <p id="movieName">Movie: Source Code</p>
+                    <p id="venue">Venue: APJ HALL</p>
+                    <p id="time">Time: 4:30 PM</p>
+                </div>
+
+                <!-- Right Section: Image -->
+                <div class="right-section">
+                    <img src="{% static 'images/cinema.jpg' %}" alt="Cinema" class="cinema-img">
+                </div>
+            </div>
+        </div>
+
+        <button id="downloadBtn" onclick="downloadTicket()">Download PDF</button>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

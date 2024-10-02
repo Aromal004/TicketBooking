@@ -1,0 +1,189 @@
+/* General styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4ff;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    color: #005f99;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+h1 {
+    font-size: 36px;
+    color: #005f99;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.movie-name{
+    color:black;
+    font-weight: 400;
+}
+/* Ticket styling */
+.ticket {
+    background-color: #e0f7fa;
+    color: #005f99;
+    padding: 20px;
+    border: 2px dashed #0077b6;
+    border-radius: 15px;
+    width: 100%;
+    margin: 20px 0;
+    box-sizing: border-box;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+}
+
+.ticket:hover {
+    transform: translateY(-5px);
+}
+
+/* Logo and heading strip */
+.ticket-header {
+    background-color: #99cfff;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: calc(100% + 40px);
+    position: relative;
+    left: -20px;
+    top: -20px;
+    border-radius: 15px 15px 0 0;
+    justify-content: flex-start;
+    box-sizing: border-box;
+}
+
+.ticket-header .logo {
+    margin-left: 20px;
+    width: 50px;
+    height: auto;
+}
+
+.ticket-header h2 {
+    font-size: 24px;
+    margin-left: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Ticket content styling */
+.ticket-details {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px 0;
+    position: relative;
+}
+
+/* Left section: User details */
+.left-section {
+    text-align: left;
+    width: 30%;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.left-section p {
+    margin: 5px 0;
+    font-weight: 600;
+    color: #0077b6;
+}
+
+/* Center section: Movie details */
+.center-section {
+    text-align: left;
+    width: 40%;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.center-section p {
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #005f99;
+    padding-left: 20px;
+}
+
+/* Right section: Cinema image */
+.right-section {
+    width: 30%;
+    text-align: right;
+}
+
+.right-section .cinema-img {
+    width: 80px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Button styling */
+/* Button styling */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 24px;
+    background-color: #0077b6;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    max-width: 200px; /* Optional to control the button size */
+}
+
+button:hover {
+    background-color: #005f99;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.5);
+}
+
+
+/* Input form styling */
+form {
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #005f99;
+}
+
+input[type="text"], input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input:focus {
+    border-color: #0077b6;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 119, 182, 0.5);
+}
