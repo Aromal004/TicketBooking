@@ -6,3 +6,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('tickets.urls')),  # Include the URLs from the tickets app
 ]
+
+
+urlpatterns+=staticfiles_urlpatterns()
