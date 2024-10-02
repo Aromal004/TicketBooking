@@ -26,10 +26,12 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 2px;
 }
-.movie-name{
-    color:black;
+
+.movie-name {
+    color: black;
     font-weight: 400;
 }
+
 /* Ticket styling */
 .ticket {
     background-color: #e0f7fa;
@@ -84,6 +86,7 @@ h1 {
     justify-content: space-between;
     padding: 20px 0;
     position: relative;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 /* Left section: User details */
@@ -130,7 +133,6 @@ h1 {
 }
 
 /* Button styling */
-/* Button styling */
 .button-container {
     display: flex;
     justify-content: center;
@@ -159,7 +161,6 @@ button:focus {
     box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.5);
 }
 
-
 /* Input form styling */
 form {
     text-align: left;
@@ -186,4 +187,59 @@ input:focus {
     border-color: #0077b6;
     outline: none;
     box-shadow: 0 0 5px rgba(0, 119, 182, 0.5);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .ticket-details {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        align-items: center; /* Center items */
+    }
+
+    .left-section, .center-section, .right-section {
+        width: 100%; /* Full width for smaller screens */
+        text-align: center; /* Center text */
+        margin-bottom: 15px; /* Space between sections */
+    }
+
+    .ticket-header {
+        flex-direction: column; /* Stack logo and title */
+        align-items: center; /* Center items */
+    }
+
+    .ticket-header h2 {
+        margin-top: 10px; /* Add space above the title */
+    }
+
+    .button-container {
+        flex-direction: column; /* Stack button on smaller screens */
+        margin-top: 30px;
+    }
+
+    button {
+        width: 100%; /* Full width button */
+        max-width: none; /* Remove max-width on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 28px; /* Smaller heading on extra small screens */
+    }
+
+    .ticket {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    .ticket-header h2 {
+        font-size: 20px; /* Smaller title */
+    }
+
+    .left-section p, .center-section p {
+        font-size: 14px; /* Smaller text for user and movie details */
+    }
+
+    button {
+        padding: 10px; /* Smaller padding for buttons */
+    }
 }
